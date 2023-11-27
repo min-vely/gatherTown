@@ -1,18 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
+
 
 public class TopDownCharacterController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public event Action<Vector2> OnMoveEvent;
+    public event Action<Vector2> OnLookEvent;
+
+
+    public void CallMoveEvent(Vector2 direction)
     {
-        
+        OnMoveEvent?.Invoke(direction);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void CallLookEvent(Vector2 direction)
     {
-        
+        OnLookEvent?.Invoke(direction);
     }
+
 }
