@@ -27,6 +27,7 @@ public class SceneController : MonoBehaviour
 
             // ¾À ÀüÈ¯
             SceneManager.LoadScene("MainScene");
+            Time.timeScale = 1.0f;
         }
         else
         {
@@ -38,7 +39,7 @@ public class SceneController : MonoBehaviour
         }
     }
 
-    private void HideEndPanel()
+    private void HideRenamePanel()
     {
         renamePanel.SetActive(false);
     }
