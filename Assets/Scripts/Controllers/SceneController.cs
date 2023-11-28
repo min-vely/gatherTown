@@ -6,7 +6,7 @@ public class SceneController : MonoBehaviour
 {
     public InputField inputField;
     public Button joinBtn;
-    public GameObject endPanel;
+    public GameObject renamePanel;
     public float displayTime = 1.0f; // 화면에 메시지를 표시할 시간
 
     public void Start()
@@ -31,15 +31,15 @@ public class SceneController : MonoBehaviour
         else
         {
             // 입력값이 유효하지 않다면
-            endPanel.SetActive(true);
+            renamePanel.SetActive(true);
 
             // 일정 시간 후에 패널을 다시 비활성화
-            Invoke("HideEndPanel", displayTime);
+            Invoke("HideRenamePanel", displayTime);
         }
     }
 
     private void HideEndPanel()
     {
-        endPanel.SetActive(false);
+        renamePanel.SetActive(false);
     }
 }
