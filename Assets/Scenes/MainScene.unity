@@ -432,7 +432,6 @@ GameObject:
   - component: {fileID: 131506925}
   - component: {fileID: 131506924}
   - component: {fileID: 131506923}
-  - component: {fileID: 131506926}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -523,20 +522,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &131506926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 131506921}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 430673d9f5791a549bc26a34a3257a58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  npcNameTxt: {fileID: 1484286118}
-  offset: {x: 1, y: 1}
 --- !u!1 &444919502
 GameObject:
   m_ObjectHideFlags: 0
@@ -4622,7 +4607,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uC9C0\uBBFC"
+  m_text: Jimin
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4779864be32dea14284be61a0c08c409, type: 2}
   m_sharedMaterial: {fileID: -8332935705211765471, guid: 4779864be32dea14284be61a0c08c409, type: 2}
