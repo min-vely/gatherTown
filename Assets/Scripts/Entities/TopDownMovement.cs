@@ -9,19 +9,12 @@ public class TopDownMovement : MonoBehaviour
     private Vector2 _movementDirection = Vector2.zero;
     private Rigidbody2D _rigidbody;
 
-    //Animator _animator;
-    //string currentState;
-    //const string Idle = "Idle";
-    //const string Walk_Front = "Walk_Front";
-    //const string Walk_Back = "Walk_Back";
-    //const string Walk_Left = "Walk_Left";
-    //const string Walk_Right = "Walk_Right";
+    public Animator _animator;
 
     private void Awake()
     {
         _controller = GetComponent<TopDownCharacterController>();
         _rigidbody = GetComponent<Rigidbody2D>();
-        //_animator = transform.Find("Character").GetComponent<Animator>();
     }
 
     private void Start()
@@ -32,10 +25,9 @@ public class TopDownMovement : MonoBehaviour
     private void FixedUpdate()
     {
         ApplyMovment(_movementDirection);
-        //if (_rigidbody.velocity == new Vector2(0, 0))
-        //{
-        //    ChangeAnimationState(Idle);
-        //}
+        _animator.SetFloat("Horizontal", _movementDirection.x);
+        _animator.SetFloat("Vertical", _movementDirection.y);
+        _animator.SetFloat("Speed", _movementDirection.sqrMagnitude);
     }
 
     private void Move(Vector2 direction)
@@ -49,11 +41,4 @@ public class TopDownMovement : MonoBehaviour
 
         _rigidbody.velocity = direction;
     }
-
-    //void ChangeAnimationState(string newState)
-    //{
-    //    if (currentState == newState) return;
-    //    _animator.Play(newState);
-    //    currentState = newState;
-    //}
 }
