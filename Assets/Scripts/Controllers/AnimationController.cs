@@ -21,5 +21,6 @@ public class AnimationController : MonoBehaviour
     void AnimState(Vector2 dir)
     {
         anim.SetBool("walk_front", dir.magnitude > 0);
+        //anim.SetBool("walk_back")
     }
 }
